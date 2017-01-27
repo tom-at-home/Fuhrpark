@@ -15,4 +15,11 @@ public class Parking {
         this.cars.add(car);
     }
 
+    public void showAllCars() {
+        for (Car car : this.cars) {
+            System.out.println("Manufacturer: " + car.manufacturer +
+                    "\nColor: " + car.color + "\n");
+        }
+    }
+
 }
