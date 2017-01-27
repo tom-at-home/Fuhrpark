@@ -21,7 +21,7 @@ public class Farm {
 		for (Animal animal : this.animals) {
 			System.out.println("Name: " + animal.getName() + 
 					"\t#Legs: " + animal.getNumberOfLegs() + 
-					"\tRace: " + animal.getRace());			
+					"\tRace: " + animal.getRace());
 		}
 	}
 	
