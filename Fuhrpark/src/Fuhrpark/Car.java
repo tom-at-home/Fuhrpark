@@ -9,10 +9,12 @@ public class Car extends Vehicle{
     }
 
     public void start_engine(){
+        this.isEngineOn = true;
         System.out.println("Ignition - the engine is on.");
     }
 
     public void stop_engine(){
+        this.isEngineOn = false;
         System.out.println("The engine is off.");
     }
 
