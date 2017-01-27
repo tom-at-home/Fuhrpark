@@ -9,11 +9,26 @@ public class Car extends Vehicle{
     }
 
     public void start_engine(){
-
+        System.out.println("Ignition - the engine is on.");
     }
 
     public void stop_engine(){
+        System.out.println("The engine is off.");
+    }
 
+    public void move_forward(int miles){
+        if(!this.isEngineOn) {
+            this.start_engine();
+        }
+        this.miles += miles;
+        System.out.println("The vehicle has moved " + this.miles + " miles since ignition.");
+    }
+
+    public void leave(){
+        if(this.isEngineOn){
+            this.stop_engine();
+        }
+        System.out.println("You have leaved the car.");
     }
 
 }
