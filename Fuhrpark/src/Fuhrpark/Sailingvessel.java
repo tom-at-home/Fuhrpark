@@ -4,9 +4,6 @@ public class Sailingvessel extends Vessel{
 
     protected boolean isSetSail;
 
-    protected Harbor current_location;
-
-
     public Sailingvessel(String manufacturer, String color, double purchase_price, Harbor current_location, Fleet fleet){
         super(manufacturer, color, purchase_price, current_location, fleet);
         this.current_location = current_location;
