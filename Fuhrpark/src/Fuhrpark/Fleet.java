@@ -7,11 +7,11 @@ public class Fleet {
 
     protected ArrayList<Vehicle> vehicles = new ArrayList<>();
 
-    public void addVehicle(Vehicle vehicle) {
+    protected void addVehicle(Vehicle vehicle) {
         this.vehicles.add(vehicle);
     }
 
-    public void showAllVehicles() {
+    protected void showAllVehicles() {
         for (Vehicle vehicle : this.vehicles) {
             System.out.println("Manufacturer: " + vehicle.manufacturer +
                     "\nColor: " + vehicle.color +
@@ -19,6 +19,25 @@ public class Fleet {
                     "\nFahzeugtyp: " + vehicle.getClass() + "\n");
         }
 
+    }
+
+    protected double getFixedAssets(){
+
+        double fixedAssets = 0;
+
+        for (Vehicle vehicle : this.vehicles) {
+            fixedAssets += vehicle.purchase_price;
+        }
+
+        return fixedAssets;
+    }
+
+    protected double getFixedAssetsAverage(){
+
+        double fixedAssets = this.getFixedAssets();
+        double assetsSize = this.vehicles.size();
+
+        return fixedAssets / assetsSize;
     }
 
 }

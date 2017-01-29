@@ -27,7 +27,7 @@ public class Car extends Vehicle{
         if(!this.isEngineOn) {
             this.start_engine();
         }
-        System.out.println("The vehicle has moved from " + this.current_location.getName() + " to " + destination.getName());
+        System.out.println("The car has moved from " + this.current_location.getName() + " to " + destination.getName());
         this.current_location.remCar(this);
         this.current_location = destination;
         this.current_location.addCar(this);
