@@ -16,9 +16,9 @@ public class Vehicle {
 		this.fleet.addVehicle(this);
     }
 
-    public void move(Parking destination){
-		System.out.println("The vehicle has moved.");
-	}
+//    public void move(Parking destination){
+//		System.out.println("The vehicle has moved.");
+//	}
 
 	public void leave(){
 		System.out.println("You have leaved the vehicle.");

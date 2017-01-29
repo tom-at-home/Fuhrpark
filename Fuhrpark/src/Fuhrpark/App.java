@@ -13,6 +13,9 @@ public class App {
         Harbor ctb = new Harbor("Burchardkai");
         Harbor sha = new Harbor("Shanghai Harbour");
 
+        Airport bre = new Airport("Bremen Airport");
+        Airport jfk = new Airport("John F Kennedy International Airport");
+
         System.out.println("");
 
         Convertible cabrio = new Convertible("Opel", "white", 100, centralParking, fleet);
@@ -28,9 +31,27 @@ public class App {
 
         System.out.println("");
 
-        Vessel miami = new Vessel("Cosco", "white", 1000, ctb, fleet);
+        Containervessel pacific = new Containervessel("Cosco", "white", 1000, ctb, fleet);
+        pacific.move(sha);
+        pacific.leave();
+
+        System.out.println("");
+
+        Sailingvessel miami = new Sailingvessel("Luerssen", "marineblue", 2000, ctb, fleet);
         miami.move(sha);
         miami.leave();
+
+        System.out.println("");
+
+        Passengerplane lh543 = new Passengerplane("Lufthansa", "whiteblue", 2200, bre, fleet);
+        lh543.move(jfk);
+        lh543.leave();
+
+        System.out.println("");
+
+        Glider superglider = new Glider("Cesna", "lightgrey", 1400, jfk, fleet);
+        superglider.move(bre);
+        superglider.leave();
 
         System.out.println("");
 
@@ -53,9 +74,13 @@ public class App {
 
         hamburg.showAllCars();
 
-        System.out.println("Shanighai\n");
+        System.out.println("Shanghai\n");
 
         sha.showAllVessels();
+
+        System.out.println("BREMEN AIRPORT\n");
+
+        bre.showAllPlanes();
 
         System.out.println("VEHICLES\n");
 
@@ -64,6 +89,7 @@ public class App {
         System.out.println("Das Anlagevermoegen der Flotte betraegt: " + fleet.getFixedAssets() + " €\n");
 
         System.out.println("Der Durchschnitt des Anlagevermoegens der Flotte betraegt: " + fleet.getFixedAssetsAverage() + " €\n");
+
     }
 
 }
