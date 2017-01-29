@@ -4,8 +4,13 @@ public class Car extends Vehicle{
 
     protected boolean isEngineOn;
 
-    public Car(String manufacturer, String color, double purchase_price){
-        super(manufacturer, color, purchase_price);
+    protected Parking current_location;
+
+
+    public Car(String manufacturer, String color, double purchase_price, Parking current_location, Fleet fleet){
+        super(manufacturer, color, purchase_price, fleet);
+        this.current_location = current_location;
+        this.current_location.addCar(this);
     }
 
     public void start_engine(){
@@ -18,12 +23,15 @@ public class Car extends Vehicle{
         System.out.println("The engine is off.");
     }
 
-    public void move_forward(int miles){
+    public void move(Parking destination){
         if(!this.isEngineOn) {
             this.start_engine();
         }
-        this.miles += miles;
-        System.out.println("The vehicle has moved " + this.miles + " miles since ignition.");
+        System.out.println("The vehicle has moved from " + this.current_location.getName() + " to " + destination.getName());
+        this.current_location.remCar(this);
+        this.current_location = destination;
+        this.current_location.addCar(this);
+
     }
 
     public void leave(){

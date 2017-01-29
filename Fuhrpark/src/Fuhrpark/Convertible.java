@@ -4,8 +4,8 @@ public class Convertible extends Car {
 
     private boolean isRoofOpen;
 
-    public Convertible(String manufacturer, String color, double purchase_price) {
-        super(manufacturer, color, purchase_price);
+    public Convertible(String manufacturer, String color, double purchase_price, Parking centralParking, Fleet fleet) {
+        super(manufacturer, color, purchase_price, centralParking, fleet);
     }
 
     public void open_roof() {
