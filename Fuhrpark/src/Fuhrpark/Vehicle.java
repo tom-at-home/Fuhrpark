@@ -4,7 +4,7 @@ public class Vehicle {
 
 	protected String manufacturer;
 	protected String color;
-	public double purchase_price;
+	protected double purchase_price;
 	protected Fleet fleet;
 
 
