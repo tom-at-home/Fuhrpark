@@ -86,9 +86,9 @@ public class App {
 
         fleet.showAllVehicles();
 
-        System.out.println("Das Anlagevermoegen der Flotte betraegt: " + fleet.getFixedAssets() + " €\n");
+        System.out.printf("Das Anlagevermoegen der Flotte betraegt: %.2f €%n", fleet.getFixedAssets());
 
-        System.out.println("Der Durchschnitt des Anlagevermoegens der Flotte betraegt: " + fleet.getFixedAssetsAverage() + " €\n");
+        System.out.printf("Der Durchschnitt des Anlagevermoegens der Flotte betraegt: %.2f €%n", fleet.getFixedAssetsAverage());
 
     }
 
