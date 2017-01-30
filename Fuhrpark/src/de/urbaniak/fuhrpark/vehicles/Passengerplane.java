@@ -1,4 +1,7 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.vehicles;
+
+import de.urbaniak.fuhrpark.fleet.Fleet;
+import de.urbaniak.fuhrpark.locations.Airport;
 
 public class Passengerplane extends Plane{
 

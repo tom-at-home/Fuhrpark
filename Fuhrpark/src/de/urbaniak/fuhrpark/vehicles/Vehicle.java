@@ -1,4 +1,6 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.vehicles;
+
+import de.urbaniak.fuhrpark.fleet.Fleet;
 
 public class Vehicle {
 
@@ -15,6 +17,20 @@ public class Vehicle {
 		this.fleet = fleet;
 		this.fleet.addVehicle(this);
     }
+	
+	public String getManufacturer(){
+		return this.manufacturer;
+	}
+	
+	public String getColor(){
+		return this.color;
+	}
+	
+	public double getPurchasePrice(){
+		return this.purchase_price;
+	}	
+	
+	
 
 //    public void move(Parking destination){
 //		System.out.println("The vehicle has moved.");

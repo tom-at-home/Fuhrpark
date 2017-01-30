@@ -1,4 +1,7 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.vehicles;
+
+import de.urbaniak.fuhrpark.fleet.Fleet;
+import de.urbaniak.fuhrpark.locations.Parking;
 
 public class Convertible extends Car {
 

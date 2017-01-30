@@ -1,6 +1,8 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.locations;
 
 import java.util.ArrayList;
+
+import de.urbaniak.fuhrpark.vehicles.Plane;
 
 public class Airport extends Location {
 
@@ -11,6 +13,10 @@ public class Airport extends Location {
         super(name);
         //this.locations.add(this);
     }
+    
+    public String getName(){
+        return this.name;
+    }    
 
     public void addPlane(Plane plane) {
         this.planes.add(plane);
@@ -22,15 +28,11 @@ public class Airport extends Location {
 
     public void showAllPlanes() {
         for (Plane plane : this.planes) {
-            System.out.println("Manufacturer: " + plane.manufacturer +
-                    "\nColor: " + plane.color +
-                    "\nCurrent Location: " + plane.current_location.name + "\n");
+            System.out.println("Manufacturer: " + plane.getManufacturer() +
+                    "\nColor: " + plane.getColor() +
+                    "\nCurrent Location: " + plane.getCurrentLocation().name + "\n");
         }
 
-    }
-
-    public String getName(){
-        return this.name;
     }
 
 }

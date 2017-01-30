@@ -1,4 +1,4 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.locations;
 
 import java.util.ArrayList;
 

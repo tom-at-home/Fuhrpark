@@ -1,4 +1,8 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.vehicles;
+
+import de.urbaniak.fuhrpark.fleet.Fleet;
+import de.urbaniak.fuhrpark.locations.Airport;
+import de.urbaniak.fuhrpark.locations.Parking;
 
 public class Plane extends Vehicle{
 
@@ -9,6 +13,10 @@ public class Plane extends Vehicle{
         this.current_location = current_location;
         this.current_location.addPlane(this);
     }
+    
+    public Airport getCurrentLocation(){
+    	return this.current_location;
+    }    
 
     public void move(Airport destination){
         System.out.println("The plane has flown from " + this.current_location.getName() + " to " + destination.getName());

@@ -1,4 +1,8 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.vehicles;
+
+import de.urbaniak.fuhrpark.fleet.Fleet;
+import de.urbaniak.fuhrpark.locations.Harbor;
+import de.urbaniak.fuhrpark.locations.Parking;
 
 public class Vessel extends Vehicle{
 
@@ -9,6 +13,10 @@ public class Vessel extends Vehicle{
         this.current_location = current_location;
         this.current_location.addVessel(this);
     }
+    
+    public Harbor getCurrentLocation(){
+    	return this.current_location;
+    }    
 
     public void move(Harbor destination){
         System.out.println("The vessel has moved from " + this.current_location.getName() + " to " + destination.getName());

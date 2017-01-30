@@ -1,6 +1,8 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.locations;
 
 import java.util.ArrayList;
+
+import de.urbaniak.fuhrpark.vehicles.Car;
 
 public class Parking extends Location {
 
@@ -9,8 +11,12 @@ public class Parking extends Location {
 
     public Parking(String name) {
         super(name);
-        //this.locations.add(this);
+        //this.addLocation(this);
     }
+    
+    public String getName(){
+        return this.name;
+    }    
 
     public void addCar(Car car) {
         this.cars.add(car);
@@ -22,9 +28,9 @@ public class Parking extends Location {
 
     public void showAllCars() {
         for (Car car : this.cars) {
-            System.out.println("Manufacturer: " + car.manufacturer +
-                    "\nColor: " + car.color +
-                    "\nCurrent Location: " + car.current_location.name + "\n");
+            System.out.println("Manufacturer: " + car.getManufacturer() +
+                    "\nColor: " + car.getColor() +
+                    "\nCurrent Location: " + car.getCurrentLocation().name + "\n");
         }
 
     }
@@ -45,8 +51,6 @@ public class Parking extends Location {
 
     }*/
 
-    public String getName(){
-        return this.name;
-    }
+
 
 }

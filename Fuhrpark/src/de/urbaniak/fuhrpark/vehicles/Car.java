@@ -1,4 +1,7 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.vehicles;
+
+import de.urbaniak.fuhrpark.fleet.Fleet;
+import de.urbaniak.fuhrpark.locations.Parking;
 
 public class Car extends Vehicle{
 
@@ -11,6 +14,10 @@ public class Car extends Vehicle{
         super(manufacturer, color, purchase_price, fleet);
         this.current_location = current_location;
         this.current_location.addCar(this);
+    }
+    
+    public Parking getCurrentLocation(){
+    	return this.current_location;
     }
 
     public void start_engine(){

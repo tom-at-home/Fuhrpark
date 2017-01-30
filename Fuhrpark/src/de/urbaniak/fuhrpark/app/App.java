@@ -1,4 +1,15 @@
-package Fuhrpark;
+package de.urbaniak.fuhrpark.app;
+
+import de.urbaniak.fuhrpark.fleet.Fleet;
+import de.urbaniak.fuhrpark.locations.Airport;
+import de.urbaniak.fuhrpark.locations.Harbor;
+import de.urbaniak.fuhrpark.locations.Parking;
+import de.urbaniak.fuhrpark.vehicles.Car;
+import de.urbaniak.fuhrpark.vehicles.Containervessel;
+import de.urbaniak.fuhrpark.vehicles.Convertible;
+import de.urbaniak.fuhrpark.vehicles.Glider;
+import de.urbaniak.fuhrpark.vehicles.Passengerplane;
+import de.urbaniak.fuhrpark.vehicles.Sailingvessel;
 
 public class App {
 
@@ -86,9 +97,9 @@ public class App {
 
         fleet.showAllVehicles();
 
-        System.out.printf("Das Anlagevermoegen der Flotte betraegt: %.2f €%n", fleet.getFixedAssets());
+        System.out.printf("Das Anlagevermoegen der Flotte betraegt: %.2f Euro%n", fleet.getFixedAssets());
 
-        System.out.printf("Der Durchschnitt des Anlagevermoegens der Flotte betraegt: %.2f €%n", fleet.getFixedAssetsAverage());
+        System.out.printf("Der Durchschnitt des Anlagevermoegens der Flotte betraegt: %.2f Euro%n", fleet.getFixedAssetsAverage());
 
     }
 
